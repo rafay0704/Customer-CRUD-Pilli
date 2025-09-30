@@ -2,11 +2,13 @@
 
 This project is a **Customer Management Dashboard** built as a **technical assessment** to demonstrate full-stack CRUD functionality. It allows adding, editing, deleting, searching, and viewing customer details with a clean, modern UI.
 
+**Live Demo:** [https://customer-crud-pilli.vercel.app/](https://customer-crud-pilli.vercel.app/)
+
 ---
 
 ## Tech Stack
 
-- **Frontend:** React, Shadcn UI, TailwindCSS
+- **Frontend:** React, TailwindCSS
 - **Backend:** Node.js, Express
 - **Database:** MongoDB
 - **Cloud Deployment:** Render
@@ -44,4 +46,3 @@ This project is a **Customer Management Dashboard** built as a **technical asses
 ## Notes
 
 This project demonstrates a **complete CRUD workflow**, frontend-backend integration, and deployment readiness, suitable for technical assessments and showcasing full-stack skills.
-
