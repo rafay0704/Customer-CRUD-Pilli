@@ -1,5 +1,10 @@
 import React from "react";
-import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const Modal = ({ isOpen, onClose, children }) => {
@@ -21,6 +26,9 @@ const Modal = ({ isOpen, onClose, children }) => {
         {/* Accessible title (hidden visually but available for screen readers) */}
         <VisuallyHidden>
           <DialogTitle>Customer Form</DialogTitle>
+        </VisuallyHidden>
+        <VisuallyHidden>
+          <DialogDescription>Fill in customer details</DialogDescription>
         </VisuallyHidden>
 
         {children}
