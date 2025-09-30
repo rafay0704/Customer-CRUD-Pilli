@@ -11,8 +11,30 @@ createRoot(document.getElementById('root')).render(
         <ThemeProvider defaultTheme="system">
 
     <App />
-        <Toaster position="top-right" />
-            </ThemeProvider>
+<Toaster
+  position="top-right"
+  richColors 
+  toastOptions={{
+    success: {
+      style: {
+        background: "#22c55e", 
+        color: "#ffffff", 
+      },
+    },
+    error: {
+      style: {
+        background: "#ef4444", // red
+        color: "#ffffff",
+      },
+    },
+    default: {
+      style: {
+        background: "#1f2937", // dark gray but visible
+        color: "#f9fafb", // light text
+      },
+    },
+  }}
+/>            </ThemeProvider>
 
 
   </StrictMode>,
