@@ -50,26 +50,27 @@ const Customers = () => {
   return (
     <div className="w-[100%] mx-auto p-6 space-y-6">
       {/* Header */}
-      <Card className="shadow-md border">
-        <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle className="text-2xl font-bold tracking-tight">
-            Customers Database
-          </CardTitle>
-          <div className="flex items-center gap-2">
-            <ModeToggle />
-            <Button onClick={handleAddClick}>
-              <Plus className="w-4 h-4 mr-2" /> Add Customer
-            </Button>
-            <Button
-              onClick={handleInsertSeed}
-              disabled={insertingSeed}
-              className="bg-green-500 hover:bg-green-600 text-white"
-            >
-              {insertingSeed ? "Inserting..." : "Insert Dummmy Data"}
-            </Button>
-          </div>
-        </CardHeader>
-      </Card>
+      <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-4">
+        <CardTitle className="text-xl sm:text-2xl font-bold tracking-tight">
+          Customers Database
+        </CardTitle>
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto">
+          <ModeToggle />
+          <Button
+            className="flex-1 sm:flex-none w-full sm:w-auto justify-center"
+            onClick={handleAddClick}
+          >
+            <Plus className="w-4 h-4 mr-2" /> Add Customer
+          </Button>
+          <Button
+            onClick={handleInsertSeed}
+            disabled={insertingSeed}
+            className="bg-green-500 hover:bg-green-600 text-white flex-1 sm:flex-none w-full sm:w-auto justify-center"
+          >
+            {insertingSeed ? "Inserting..." : "Insert Dummy Data"}
+          </Button>
+        </div>
+      </CardHeader>
 
       {/* Modal */}
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
